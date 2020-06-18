@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/lib/phaser.min.js"></script>
+	<script src="js/src/Boot.js"></script>
+	<script src="js/src/Preloader.js"></script>
+	<script src="js/src/MainMenu.js"></script>
+    <script src="js/src/GameOver.js"></script>
+    <script src="js/src/GameOver2.js"></script>
+    <script src="js/src/Congratulations.js"></script>
+	<script src="js/src/GameMarisa.js"></script>
+    <script src="js/src/GameReimu.js"></script>
+    <script src="js/src/GameYoumu.js"></script>
+    <script src="js/src/GameSakuya.js"></script>
+    <script src="js/src/GameAya.js"></script>
+    <script src="js/src/PreGame.js"></script>
+    <style>
+        html, body {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+        	margin: auto;
+        }
+    </style>
+</head>
+<body >
+
+<div id="gameContainer"></div>
+
+<script type="text/javascript">
+
+window.onload = function() {
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, "gameContainer");
+	game.state.add('Boot', BasicGame.Boot);
+	game.state.add('Preloader', BasicGame.Preloader);
+	game.state.add('MainMenu', BasicGame.MainMenu);
+    game.state.add('GameOver', BasicGame.GameOver);
+    game.state.add('GameOver2', BasicGame.GameOver2);
+    game.state.add('Congratulations', BasicGame.Congratulations);
+    game.state.add('GameReimu', BasicGame.GameReimu);
+    game.state.add('GameMarisa', BasicGame.GameMarisa);
+    game.state.add('GameYoumu', BasicGame.GameYoumu);
+    game.state.add('GameSakuya', BasicGame.GameSakuya);
+    game.state.add('GameAya', BasicGame.GameAya);
+    game.state.add('PreGame', BasicGame.PreGame);
+	game.state.start('Boot');
+};
+
+</script>
+
+</body>
+</html>
